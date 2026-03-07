@@ -12,14 +12,10 @@ body {
 }
 
 .logo {
-  position: absolute;
-  top: 60px;
-  left: 1%;
-  transform: translate (-50% -50%);
-  width: 275px; /* Adjust size as needed */
+  width: 100%;
+  max-width: 300px;
   height: auto;
-  max-width: 100%;
-  z-index: 10;
+  padding: 10px 10px;
 }
 
 .topnav {
@@ -69,8 +65,9 @@ body {
 }
 
 .text-overlay {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  max-width: 550px;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -78,6 +75,6 @@ body {
   font-weight: bold;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for readability */
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 5px;
 }
