@@ -11,6 +11,17 @@ body {
  background-size: cover;
 }
 
+.logo {
+  position: absolute;
+  top: 60px;
+  left: 1%;
+  transform: translate (-50% -50%);
+  width: 275px; /* Adjust size as needed */
+  height: auto;
+  max-width: 100%;
+  z-index: 10;
+}
+
 .topnav {
  background-color: #333;
  overflow: hidden;
