@@ -2,27 +2,32 @@ body {
  margin: 0;
  background-color: #333;
  font-family:'Courier New', Courier, monospace;
+ color: #f1f1f1;
 }
 
 .logo {
-  float: left;
-  max-width: 30%;
+  float: none;
+  width: 30%;
+  max-width: 330px;
+  min-width: 200px;
   height: auto;
-  padding: 10px 10px;
+  padding: 40px;
+  margin-right: 20px; 
 }
 
 .header {
   position: relative;
   width: auto;
-}
-
-.home-header {
-  background-image: url("assets/home-header.webp");
   min-height: 250px;
   background-position: 50% 41%;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  background-image: var(--header-bg, url("assets/default-header.webp"));
+  display: flex;             /* Enable Flexbox */
+  justify-content: space-between; /* Push logo left, menu right */
+  align-items: center;       /* Vertically center them */
+  padding: 10px 20px;        /* Add some breathing room */
+  min-height: 80px;   
 }
 
 .overlay {
@@ -77,21 +82,13 @@ body {
 }
 
 .menu {
-  float: right;
+  float: none;
   font-size:30px;
   color: #f1f1f1;
   cursor:pointer;
   padding: 40px 40px;
+  white-space: nowrap;
 }
-
-/*.image-crop {
-  float: left;
-  width: 900px;
-  max-width: 50%;
-  height: auto;
-  overflow: hidden;
-  padding: 20px;
-}*/
 
 .container {
   position: relative;
@@ -108,7 +105,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  max-height: 300px;
+  max-height: 250px;
   object-fit: cover;
   overflow: hidden;
 }
@@ -121,21 +118,46 @@ body {
   color: #f1f1f1;
   text-align: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 
-.text-overlay {
-  position: relative;
-  max-width: 550px;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 10px;
-  border-radius: 5px;
+.gallery-container {
+  width: 100%;
+  padding: 20px; /* Your desired spacing around the gallery */
+  box-sizing: border-box; /* Ensures padding doesn't affect total width */
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+}
+
+.gallery figure {
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery figcaption {
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  color: white;
+  padding: 8px 3px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
