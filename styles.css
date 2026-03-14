@@ -17,8 +17,8 @@ body {
 
 .header {
   position: relative;
-  width: auto;
-  min-height: 250px;
+  width: 100%;
+  min-height: 80px;
   background-position: 50% 41%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,8 +26,44 @@ body {
   display: flex;             /* Enable Flexbox */
   justify-content: space-between; /* Push logo left, menu right */
   align-items: center;       /* Vertically center them */
-  padding: 10px 20px;        /* Add some breathing room */
-  min-height: 80px;   
+  padding: 10px 15px;        /* Add some breathing room */ 
+  box-sizing: border-box;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+    min-height: 60px;
+  }
+
+  .logo {
+    max-width: 120px; /* Smaller logo on mobile */
+    padding: 0;
+    margin-right: 10px;
+  }
+
+  .menu {
+    font-size: 24px; /* Smaller menu text */
+    padding: 10px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .header {
+    padding: 8px 10px;
+    min-height: 50px;
+  }
+
+  .logo {
+    max-width: 100px;
+  }
+
+  .menu {
+    font-size: 20px;
+    padding: 8px;
+  }
 }
 
 .overlay {
